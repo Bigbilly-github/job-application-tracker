@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    <header className='bg-[red] h-[100px] fixed top-0 left-0 right-0' />
+    <header className='bg-[red] h-[100px] fixed top-0 left-0 right-0 bottom-0' />
       
     </>
   )
