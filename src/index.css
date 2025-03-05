@@ -3,3 +3,17 @@
 @theme{
   --font-inter: "Inter" ;
 }
+
+body{
+  background-color: #F6F7F8;
+}
+
+html, body {
+  overflow-x: hidden; 
+  width: 100vw; 
+}
+
+
+#root {
+  overflow-x: hidden;
+}
