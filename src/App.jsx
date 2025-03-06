@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <Homepage  jobs={jobs} addJob={addJob}/>
-      <JobDisplay   />
+      <JobDisplay  jobs={jobs}  />
       
     </>
   )

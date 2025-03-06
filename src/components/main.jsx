@@ -81,14 +81,14 @@ function AddToJob (addJob,job) {
             for: "jobtype",
             id: "jobtype",
             name:"jobtype",
-            option1: "choose type",
+            option1: "Choose type",
             value1: "",
-            option2: "hybrid",
-            value2: "hybrid",
-            option3: "on-site",
-            value3: "onsite",
-            option4: "remote",
-            value4: "remote",
+            option2: "Hybrid",
+            value2: "Hybrid",
+            option3: "On-Site",
+            value3: "On-Site",
+            option4: "Remote",
+            value4: "Remote",
 
             
 
@@ -98,14 +98,14 @@ function AddToJob (addJob,job) {
             for: "jobstage",
             id: "jobstage",
             name:"jobstage",
-            option1: "choose stage",
+            option1: "Choose stage",
             value1: "",
             option2: "Applied",
-            value2: "applied",
+            value2: "Applied",
             option3: "1st Interview",
-            value3: "interview",
+            value3: "1st Interview",
             option4: "Final Interview",
-            value4: "finalinterview",
+            value4: "Final Interview",
 
             
 
@@ -119,9 +119,11 @@ function AddToJob (addJob,job) {
     return(
         <>
         <section className="w-[100%] h-[100vh] mt-[120px]  flex-col   flex items-center">
+            <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 shadow-xl pt-[15px] pb-[20px] rounded-2xl">
 
+          
 
-            <form   className=" mt-[10px] w-[500px] flex flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 shadow-xl pt-[15px] pb-[20px] rounded-2xl ">
+                 <form   className=" mt-[10px]">
 
                 <h1 className="font-bold  font-inter text-[30px]  w-[400px] mb-[20px]">
                     Enter job details below
@@ -161,24 +163,18 @@ function AddToJob (addJob,job) {
                    </select>
                     
                 </div>
-    )}
+                 )}
+                 
+                 </form>
 
+                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className="px-[170px] mt-[20px] font-medium mx-auto bg-amber-300 py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
+                        Submit
 
+                    </button>
 
-
-
-
-                
-
-               
-            </form>
-            <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className="px-[170px] mt-[20px] font-medium mx-auto bg-amber-300 py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
-                    Submit
-
-                </button>
-
-           <button className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">See all Jobs</button>
-
+              
+             </div>
+             <button className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">See all Jobs</button>
         </section>
         </>
     )

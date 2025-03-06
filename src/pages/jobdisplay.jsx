@@ -1,10 +1,14 @@
+import Display from "../components/display"
+import Header from "../components/header"
 
 
 
 
-function JobDisplay(){
+function JobDisplay({jobs}){
     return(
         <>
+            <Header/>
+            <Display jobs={jobs}/>
       
         </>
     )
