@@ -45,20 +45,21 @@ function Display ({jobs, deleteJob}){
     return(
         <>
         <main className="w-[100%] h-[100vh] flex flex-col items-center mt-[120px] ">
-            <div>
+           { jobs.length > 0 ? <div>
                     <h1 className="text-[40px] font-bold font-inter mb-[20px]">
                         See All Jobs Here
                     </h1>
-                    <label htmlFor="displayoptions" className="text-[20px] mr-3 font-medium text-gray-700">Display Options:</label>
-                    <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="px-[15px]  rounded-[6px] py-[10px] text-[18px] font-normal  border border-gray-300" >
-                            <option value="">Choose jobs to display</option>
-                            <option value="alljobs">All Jobs</option>
-                            <option value="Applied">Jobs at Applied Stage</option>
-                            <option value="1st Interview">Jobs at 1st Interview Stage</option>
-                            <option value="Final Interview">Jobs at final Interview Stage</option>
+                    
+                        <label htmlFor="displayoptions" className="text-[20px] mr-3 font-medium text-gray-700">Display Options:</label>
+                                        <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="px-[15px]  rounded-[6px] py-[10px] text-[18px] font-normal  border border-gray-300" >
+                                            <option value="">Choose jobs to display</option>
+                                            <option value="alljobs">All Jobs</option>
+                                            <option value="Applied">Jobs at Applied Stage</option>
+                                            <option value="1st Interview">Jobs at 1st Interview Stage</option>
+                                            <option value="Final Interview">Jobs at final Interview Stage</option>
 
 
-                    </select>
+                                         </select>
                     <table className="border  w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
                             <thead>
                                     <tr className="bg-gray-200 text-gray-500  font-bold font-inter text-2xl">
@@ -73,6 +74,7 @@ function Display ({jobs, deleteJob}){
 
                             </thead>
                             <tbody className="bg-white">
+                            
                                { value!=="alljobs" ? ShowJobs(value,jobs):
                                 jobs.map ((job, index)=> <tr className="hover:bg-gray-100 text-center text-gray-500 font-inter font-medium text-xl">
                                     <td className="px-4 py-6 border ">{index +1}</td>
@@ -95,7 +97,9 @@ function Display ({jobs, deleteJob}){
                                     <button onClick= {()=>deleteJob(index)}  className="bg-black  px-4 py-6 border hover:opacity-70 text-gray-200">DELETE</button>
 
                                 </tr>
-                                )}
+                                )
+                                }
+                           
 
                             </tbody>
 
@@ -104,6 +108,10 @@ function Display ({jobs, deleteJob}){
                     </table>
 
             </div>
+            :
+                    
+                    <h1 className="text-[50px] font-bold text-gray-900 font-inter">No jobs to be displayed. Click link to Add new jobs</h1>
+                            }
 
 
         </main>

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 
 
@@ -174,7 +175,7 @@ function AddToJob (addJob,job) {
 
               
              </div>
-             <button className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">See all Jobs</button>
+             <button className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]"><a  target="_blank" href="../pages/jobdisplay.jsx"></a>See all Jobs</button>
         </section>
         </>
     )
