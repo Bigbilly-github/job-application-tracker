@@ -4,11 +4,11 @@ import Header from "../components/header"
 
 
 
-function JobDisplay({jobs}){
+function JobDisplay({jobs, deleteJob}){
     return(
         <>
             <Header/>
-            <Display jobs={jobs}/>
+            <Display jobs={jobs} deleteJob={deleteJob}/>
       
         </>
     )

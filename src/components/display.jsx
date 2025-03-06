@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 
-function Display ({jobs}){
+function Display ({jobs, deleteJob}){
 
     const [value, setValue  ] = useState("");
 
@@ -30,6 +30,7 @@ function Display ({jobs}){
                                                                       } `}>
                                     {job.jobstage}
                                     </td>
+                                    <button  onClick= {()=>deleteJob(index)} className="bg-black  px-4 py-6 border hover:opacity-70 text-gray-200">DELETE</button>
 
                                 </tr>
                                 );
@@ -90,6 +91,8 @@ function Display ({jobs}){
                                                                       } `}>
                                     {job.jobstage}
                                     </td>
+
+                                    <button onClick= {()=>deleteJob(index)}  className="bg-black  px-4 py-6 border hover:opacity-70 text-gray-200">DELETE</button>
 
                                 </tr>
                                 )}

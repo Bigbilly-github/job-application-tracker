@@ -20,7 +20,8 @@ function App() {
   }, [jobs]);
 
   function deleteJob (index) {
-     jobs.filter ((job)=>  job !== index)
+    const newjobs= jobs.filter ((_,i)=>  i!== index);
+    setJobs(newjobs);
   }
 
   function addJob (job){
@@ -37,7 +38,7 @@ function App() {
   return (
     <>
       <Homepage  jobs={jobs} addJob={addJob}/>
-      <JobDisplay  jobs={jobs}  />
+      <JobDisplay  jobs={jobs} deleteJob={deleteJob} />
       
     </>
   )
