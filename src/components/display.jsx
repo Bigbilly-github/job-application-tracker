@@ -10,6 +10,14 @@ function Display ({jobs, deleteJob}){
         setValue(e.target.value);
     }
 
+    function scrollToSection (){
+        window.scrollTo ({
+          top: 0,
+          behavior:"smooth"
+        });
+      };
+
+
 
     function ShowJobs (value,jobs) {
         const newJobs= jobs.filter((job)=> job.jobstage===value);
@@ -110,7 +118,7 @@ function Display ({jobs, deleteJob}){
             </div>
             :
                     
-                    <h1 className="text-[50px] font-bold text-gray-900 font-inter">No jobs to be displayed. Click link to Add new jobs</h1>
+                    <h1 className="text-[50px] font-bold text-gray-900 font-inter">No jobs to be displayed. Click <a href="" onClick={scrollToSection} className="text-gray-400 font-inter">link</a> to Add new jobs</h1>
                             }
 
 
