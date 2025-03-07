@@ -203,7 +203,7 @@ function AddToJob (addJob,job) {
                  
                  </form>
 
-                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className="px-[170px] mt-[20px] font-medium mx-auto bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
+                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className=" mt-[20px] font-medium mx-auto w-[350px] sm:w-[400px] bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
                         Submit
 
                     </button>

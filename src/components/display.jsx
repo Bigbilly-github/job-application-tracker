@@ -47,6 +47,37 @@ function Display ({jobs, deleteJob}){
 
     }
 
+    function ShowJobs2 (value,jobs) {
+        const newJobs= jobs.filter((job)=> job.jobstage===value);
+        const newJobsHtml =   newJobs.map ((job, index)=> <div className="sm:w-[500px] w-[400px] mt-[40px]  mb-[20px] shadow-md pl-[20px] pb-[20px] pt-[20px]">
+                        <p className="text-[24px] text-gray-500  mb-[7px] font-medium font-inter">
+                            Company Name:   <span className="text-black font-mono">{job.companyname}</span>
+                        </p>
+                        <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                            Role:  <span className="text-black font-mono">{job.jobrole}</span>
+                        </p>
+                        <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                            Location:  <span className="text-black font-mono">{job.joblocation}</span>
+                        
+                        </p>
+                        <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                            Type:  <span className="text-black font-mono">{job.jobtype}</span>
+                        </p>
+                        <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                            Stage:  <span className="text-black font-mono">{job.jobstage}</span>
+                        </p>
+
+                        <button onClick= {()=>deleteJob(index)}  className="bg-black text-[14px] px-4 py-2 mt-[10px] rounded-[10px]  hover:bg-gray-200 hover:text-black text-gray-200">DELETE</button>
+
+
+
+                    </div>
+                                );
+         return newJobsHtml;
+
+
+    }
+
     
     
 
@@ -72,7 +103,7 @@ function Display ({jobs, deleteJob}){
 
                     </div>
                        
-                    <table className="border   w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
+                    <table className="border hidden lg:block  w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
                             <thead>
                                     <tr className="bg-gray-200 text-gray-500  font-bold font-inter text-2xl">
                                             <th className="px-4 py-2 border">Index</th>
@@ -118,6 +149,37 @@ function Display ({jobs, deleteJob}){
 
 
                     </table>
+                    { value!=="alljobs" ? ShowJobs2(value,jobs):
+                                jobs.map ((job, index)=> <div className="sm:w-[500px] w-[400px]  mt-[40px]  mb-[30px] shadow-md pl-[20px] pb-[20px] pt-[20px]">
+                                            <p className="text-[24px] text-gray-500 mb-[7px] font-medium font-inter">
+                                                Company Name: <span className="text-black font-mono">{job.companyname}</span>
+                                            </p>
+                                            <p className="text-[24px] text-gray-500  mb-[7px] font-medium">
+                                                Role:  <span className="text-black font-mono">{job.jobrole}</span>
+                                            </p>
+                                            <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                                                Location:  <span className="text-black font-mono">{job.joblocation}</span>
+                                            
+                                            </p>
+                                            <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                                                Type:  <span className="text-black font-mono">{job.jobtype}</span>
+                                            </p>
+                                            <p className="text-[24px] text-gray-500 mb-[7px] font-medium">
+                                                Stage:  <span className="text-black font-mono">{job.jobstage}</span>
+                                            </p>
+
+                                            <button onClick= {()=>deleteJob(index)}  className="bg-black text-[14px] px-4 py-2 mt-[10px] rounded-[10px] hover:bg-gray-200 hover:text-black text-gray-200">DELETE</button>
+                    
+    
+                            
+                                    </div>
+
+
+
+                                
+                                )
+                                }
+
                     <button onClick={scrollToSection}  className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">Home</button>
 
             </div>
