@@ -114,6 +114,7 @@ function Display ({jobs, deleteJob}){
 
 
                     </table>
+                    <button onClick={scrollToSection}  className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">Home</button>
 
             </div>
             :
