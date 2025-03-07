@@ -154,7 +154,7 @@ function AddToJob (addJob,job) {
     return(
         <>
         <section className="w-[100%] h-[100vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
-            <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 sm:shadow-xl pt-[15px] pb-[20px] rounded-2xl">
+            <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 sm:shadow-xl pb-[20px] rounded-2xl">
 
           
 
