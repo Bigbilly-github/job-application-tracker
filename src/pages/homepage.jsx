@@ -9,7 +9,7 @@ function Homepage ({jobs, addJob}){
     return(
         <>
             <Header/>
-            <Main jobs={jobs} addJob={addJob} />
+            <Main jobs={jobs} addJob={addJob}  />
         
         </>
     )

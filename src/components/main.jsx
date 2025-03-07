@@ -13,36 +13,70 @@ function Main ({jobs, addJob}) {
         jobstage:"",
        
     });
+    function scrollToSection (){
+        window.scrollTo ({
+          top: 850,
+          behavior:"smooth"
+        });
+      };
+
+
+      function isJobValid (job){
+        return Object.values(job).every(value => value.trim() !== "");
+
+      }
  
 
 
 
   function HandleCompanyName (e){
+    const value1 = e.target.value;
+    if (value1.trim() !==""){
+        setJob(j=>({...j, companyname:value1}))
+
+    }
     
-    setJob(j=>({...j, companyname:e.target.value}))
+   
 }
   function HandleRole (e){
-    setJob(j=>({...j, jobrole:e.target.value}))
+    const value2 = e.target.value;
+    if (value2.trim() !==""){
+        setJob(j=>({...j, jobrole:value2}))
+    }
 
   }
   function HandleLocation (e){
-    setJob(j=>({...j, joblocation:e.target.value}))
+    const value3 = e.target.value;
+    if (value3.trim() !=="" ){
+        setJob(j=>({...j, joblocation:value3}))
+    }
 
   }
 
   function HandleJobType (e) {
-    setJob(j=>({...j, jobtype:e.target.value}))
+    const value4 = e.target.value;
+    if (value4.trim() !=="" ){
+        setJob(j=>({...j, jobtype:value4}))
+    }
   }
 
-  function HandleJobStage (e) {
-    setJob(j=>({...j, jobstage:e.target.value}))
+  function HandleJobStage (e) {   
+     const value5 = e.target.value;
+    if (value5.trim() !=="" ){
+        setJob(j=>({...j, jobstage:value5}))
+    }
   }
 
     
     
 function AddToJob (addJob,job) {
-    addJob(job);
-    setJob(j => ({...j, companyname:"" ,jobrole:"" ,joblocation:"", jobtype:"", jobstage:""}))
+    if (isJobValid(job)) {
+        addJob(job);
+        setJob(j => ({...j, companyname:"" ,jobrole:"" ,joblocation:"", jobtype:"", jobstage:""}))
+    }
+    else {
+        alert("Please fill out all fields before adding the job.");
+    }
 }
 
     
@@ -175,7 +209,7 @@ function AddToJob (addJob,job) {
 
               
              </div>
-             <button className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]"><a  target="_blank" href="../pages/jobdisplay.jsx"></a>See all Jobs</button>
+             <button  onClick={scrollToSection} type="btn" className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">See all Jobs</button>
         </section>
         </>
     )
