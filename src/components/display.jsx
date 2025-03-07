@@ -53,22 +53,26 @@ function Display ({jobs, deleteJob}){
     return(
         <>
         <main className="w-[100%] h-[100vh] flex flex-col items-center mt-[120px] ">
-           { jobs.length > 0 ? <div>
+           { jobs.length > 0 ? <div className="flex flex-col items-center">
                     <h1 className="text-[40px] font-bold font-inter mb-[20px]">
                         See All Jobs Here
                     </h1>
-                    
+
+                    <div>
                         <label htmlFor="displayoptions" className="text-[20px] mr-3 font-medium text-gray-700">Display Options:</label>
-                                        <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="px-[15px]  rounded-[6px] py-[10px] text-[18px] font-normal  border border-gray-300" >
-                                            <option value="">Choose jobs to display</option>
-                                            <option value="alljobs">All Jobs</option>
-                                            <option value="Applied">Jobs at Applied Stage</option>
-                                            <option value="1st Interview">Jobs at 1st Interview Stage</option>
-                                            <option value="Final Interview">Jobs at final Interview Stage</option>
+                                            <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="px-[15px]  rounded-[6px] py-[10px] text-[18px] font-normal font-sans border border-gray-300" >
+                                                <option value="">Choose jobs to display</option>
+                                                <option value="alljobs">All Jobs</option>
+                                                <option value="Applied">Jobs at Applied Stage</option>
+                                                <option value="1st Interview">Jobs at 1st Interview Stage</option>
+                                                <option value="Final Interview">Jobs at final Interview Stage</option>
 
 
-                                         </select>
-                    <table className="border  w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
+                                            </select>
+
+                    </div>
+                       
+                    <table className="border   w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
                             <thead>
                                     <tr className="bg-gray-200 text-gray-500  font-bold font-inter text-2xl">
                                             <th className="px-4 py-2 border">Index</th>
@@ -114,12 +118,12 @@ function Display ({jobs, deleteJob}){
 
 
                     </table>
-                    <button onClick={scrollToSection}  className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">Home</button>
+                    <button onClick={scrollToSection}  className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">Home</button>
 
             </div>
             :
                     
-                    <h1 className="text-[50px] font-bold text-gray-900 font-inter">No jobs to be displayed. Click <a href="" onClick={scrollToSection} className="text-gray-400 font-inter">link</a> to Add new jobs</h1>
+                    <h1 className="text-[50px] font-bold text-gray-900  text-center font-inter">No jobs to be displayed. Click <a href="" onClick={scrollToSection} className="text-gray-400 font-inter">link</a> to Add new jobs</h1>
                             }
 
 

@@ -174,7 +174,8 @@ function AddToJob (addJob,job) {
                                             onChange={
                                                 list.name === "company" ? HandleCompanyName :
                                                 list.name === "jobrole" ? HandleRole :
-                                                HandleLocation
+                                                list.name === "joblocation" ? HandleLocation:
+                                                null
 
                                             }
                         id={list.id} name={list.name}  placeholder={list.placeholder} className="py-[10px] px-[10px] w-[350px] rounded-[6px] border border-slate-400"  minLength={8} required/>
@@ -202,14 +203,14 @@ function AddToJob (addJob,job) {
                  
                  </form>
 
-                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className="px-[170px] mt-[20px] font-medium mx-auto bg-amber-300 py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
+                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className="px-[170px] mt-[20px] font-medium mx-auto bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
                         Submit
 
                     </button>
 
               
              </div>
-             <button  onClick={scrollToSection} type="btn" className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">See all Jobs</button>
+             <button  onClick={scrollToSection} type="btn" className="bg-amber-500  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px] hover:bg-black hover:text-amber-500">See all Jobs</button>
         </section>
         </>
     )
