@@ -4,12 +4,12 @@ import Main from "../components/main"
 
 
 
-function Homepage ({jobs, addJob}){
+function Homepage (){
 
     return(
         <>
             <Header/>
-            <Main jobs={jobs} addJob={addJob}  />
+            <Main />
         
         </>
     )

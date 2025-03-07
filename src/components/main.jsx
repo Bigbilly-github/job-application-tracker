@@ -1,9 +1,15 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+
+import { useValueContext } from "./propscontext";
 
 
 
-function Main ({jobs, addJob}) {
+
+function Main () {
+    const {jobs, addJob} = useValueContext();
+
+    console.log(addJob)
    
     const [job, setJob] = useState({
         companyname:"",
@@ -13,13 +19,7 @@ function Main ({jobs, addJob}) {
         jobstage:"",
        
     });
-    function scrollToSection (){
-        window.scrollTo ({
-          top: 850,
-          behavior:"smooth"
-        });
-      };
-
+    
 
       function isJobValid (job){
         return Object.values(job).every(value => value.trim() !== "");
@@ -153,7 +153,8 @@ function AddToJob (addJob,job) {
 
     return(
         <>
-        <section className="w-[100%] h-[100vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
+        
+        <section className="w-[100%] h-80vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
             <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 sm:shadow-xl  sm:pb-[20px] rounded-2xl">
 
           
@@ -210,7 +211,7 @@ function AddToJob (addJob,job) {
 
               
              </div>
-             <button  onClick={scrollToSection} type="btn" className="bg-black  text-amber-300  font-medium  px-[40px] sm:mt-[25px] mt-[15px] py-[10px] rounded-[10px] border-0 text-[20px] hover:bg-amber-300 hover:text-black">See all Jobs</button>
+             <button  type="btn" className="bg-black  text-amber-300  font-medium  px-[40px] sm:mt-[25px] mt-[15px] py-[10px] rounded-[10px] border-0 text-[20px] hover:bg-amber-300 hover:text-black"> <Link to="/jobs">See all Jobs</Link></button>
         </section>
         </>
     )

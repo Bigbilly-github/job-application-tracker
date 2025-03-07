@@ -1,8 +1,12 @@
 import { useState } from "react"
+import { useValueContext } from "./propscontext";
+import {  Link } from "react-router-dom";
 
 
 
-function Display ({jobs, deleteJob}){
+
+function Display (){
+    const {jobs, deleteJob} = useValueContext();
 
     const [value, setValue  ] = useState("");
 
@@ -10,12 +14,7 @@ function Display ({jobs, deleteJob}){
         setValue(e.target.value);
     }
 
-    function scrollToSection (){
-        window.scrollTo ({
-          top: 0,
-          behavior:"smooth"
-        });
-      };
+  
 
 
 
@@ -83,7 +82,7 @@ function Display ({jobs, deleteJob}){
 
     return(
         <>
-        <main className="w-[100%] h-[100vh] flex flex-col items-center mt-[120px] ">
+        <main className="w-[100%] h-[100vh] flex flex-col items-center mt-[170px] ">
            { jobs.length > 0 ? <div className="flex flex-col items-center">
                     <h1 className="text-[40px] font-bold font-inter mb-[20px]">
                         See All Jobs Here
@@ -180,12 +179,12 @@ function Display ({jobs, deleteJob}){
                                 )
                                 }
 
-                    <button onClick={scrollToSection}  className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]">Home</button>
+                    <button   className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]"><Link to="/">Home</Link></button>
 
             </div>
             :
                     
-                    <h1 className="text-[50px] font-bold text-gray-900  text-center font-inter">No jobs to be displayed. Click <a href="" onClick={scrollToSection} className="text-gray-400 font-inter">link</a> to Add new jobs</h1>
+                    <h1 className="text-[50px] font-bold text-gray-900 mt-[15%] text-center font-inter">No jobs to be displayed. Click <Link to="/"  className="text-gray-400 font-inter ">link</Link> to Add new jobs</h1>
                             }
 
 
