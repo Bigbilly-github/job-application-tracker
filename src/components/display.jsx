@@ -82,7 +82,7 @@ function Display (){
 
     return(
         <>
-        <main className="w-[100%] h-[100vh] flex flex-col items-center mt-[170px] ">
+        <main className="w-[100%]  flex flex-col items-center mt-[170px] ">
            { jobs.length > 0 ? <div className="flex flex-col items-center">
                     <h1 className="text-[40px] font-bold font-inter mb-[20px]">
                         See All Jobs Here
