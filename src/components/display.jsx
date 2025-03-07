@@ -136,7 +136,7 @@ function Display (){
                                     {job.jobstage}
                                     </td>
 
-                                    <button onClick= {()=>deleteJob(index)}  className="bg-black  px-4 py-6 border hover:opacity-70 text-gray-200">DELETE</button>
+                                    <button onClick= {()=>deleteJob(index)}  className="bg-black  px-4 py-6 border hover:bg-gray-200 hover:text-black text-gray-200">DELETE</button>
 
                                 </tr>
                                 )
@@ -179,7 +179,7 @@ function Display (){
                                 )
                                 }
 
-                    <button   className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[25px] py-[10px] rounded-[10px] border-0 text-[20px]"><Link to="/">Home</Link></button>
+                    <button   className="bg-amber-500 hover:text-amber-500 w-[150px] hover:bg-slate-900  text-slate-900  font-medium  px-[40px] mt-[35px] mb-[60px] py-[10px] rounded-[10px] border-0 text-[20px]"><Link to="/">Home</Link></button>
 
             </div>
             :
