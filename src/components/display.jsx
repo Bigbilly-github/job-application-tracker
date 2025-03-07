@@ -49,7 +49,7 @@ function Display ({jobs, deleteJob}){
 
     function ShowJobs2 (value,jobs) {
         const newJobs= jobs.filter((job)=> job.jobstage===value);
-        const newJobsHtml =   newJobs.map ((job, index)=> <div className="sm:w-[500px] w-[400px] mt-[40px]  mb-[20px] shadow-md pl-[20px] pb-[20px] pt-[20px]">
+        const newJobsHtml =   newJobs.map ((job, index)=> <div className=" lg:hidden  sm:w-[500px] w-[400px] mt-[40px]  mb-[20px] shadow-md sm:pl-[20px] pl-[30px] pb-[20px] pt-[20px]">
                         <p className="text-[24px] text-gray-500  mb-[7px] font-medium font-inter">
                             Company Name:   <span className="text-black font-mono">{job.companyname}</span>
                         </p>
@@ -89,9 +89,9 @@ function Display ({jobs, deleteJob}){
                         See All Jobs Here
                     </h1>
 
-                    <div>
+                    <div className="flex flex-col gap-2 sm:gap-0 sm:flex-row sm:items-center">
                         <label htmlFor="displayoptions" className="text-[20px] mr-3 font-medium text-gray-700">Display Options:</label>
-                                            <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="px-[15px]  rounded-[6px] py-[10px] text-[18px] font-normal font-sans border border-gray-300" >
+                                            <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="sm:px-[15px] px-[5px]  rounded-[6px] py-[10px] text-[18px] font-normal font-sans border border-gray-300" >
                                                 <option value="">Choose jobs to display</option>
                                                 <option value="alljobs">All Jobs</option>
                                                 <option value="Applied">Jobs at Applied Stage</option>
@@ -103,7 +103,7 @@ function Display ({jobs, deleteJob}){
 
                     </div>
                        
-                    <table className="border hidden lg:block  w-full border-gray-700 shadow-md rounded-lg mt-[20px]">
+                    <table className="border hidden lg:block  w-full border-gray-700 shadow-md rounded-lg mt-[40px]">
                             <thead>
                                     <tr className="bg-gray-200 text-gray-500  font-bold font-inter text-2xl">
                                             <th className="px-4 py-2 border">Index</th>
@@ -150,7 +150,7 @@ function Display ({jobs, deleteJob}){
 
                     </table>
                     { value!=="alljobs" ? ShowJobs2(value,jobs):
-                                jobs.map ((job, index)=> <div className="sm:w-[500px] w-[400px]  mt-[40px]  mb-[30px] shadow-md pl-[20px] pb-[20px] pt-[20px]">
+                                jobs.map ((job, index)=> <div className=" lg:hidden   sm:w-[500px] w-[400px]  mt-[40px]  mb-[30px] shadow-md sm:pl-[20px] pl-[30px] pb-[20px] pt-[20px]">
                                             <p className="text-[24px] text-gray-500 mb-[7px] font-medium font-inter">
                                                 Company Name: <span className="text-black font-mono">{job.companyname}</span>
                                             </p>

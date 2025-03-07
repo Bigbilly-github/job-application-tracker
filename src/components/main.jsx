@@ -153,8 +153,8 @@ function AddToJob (addJob,job) {
 
     return(
         <>
-        <section className="w-[100%] h-[100vh] mt-[120px]  flex-col   flex items-center">
-            <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 shadow-xl pt-[15px] pb-[20px] rounded-2xl">
+        <section className="w-[100%] h-[100vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
+            <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 sm:shadow-xl pt-[15px] pb-[20px] rounded-2xl">
 
           
 
@@ -203,7 +203,7 @@ function AddToJob (addJob,job) {
                  
                  </form>
 
-                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className=" mt-[20px] font-medium mx-auto w-[350px] sm:w-[400px] bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] shadow-2xl">
+                <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className=" mt-[20px] font-medium sm:mx-auto -ml-[50px] w-[350px] sm:w-[400px] bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] sm:shadow-2xl">
                         Submit
 
                     </button>
