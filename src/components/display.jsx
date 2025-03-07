@@ -89,7 +89,7 @@ function Display ({jobs, deleteJob}){
                         See All Jobs Here
                     </h1>
 
-                    <div className="flex flex-col gap-2 sm:gap-0 sm:flex-row sm:items-center">
+                    <div className="flex flex-col gap-2 sm:gap-0 sm:flex-row sm:items-center sm:w-auto  w-[335px]">
                         <label htmlFor="displayoptions" className="text-[20px] mr-3 font-medium text-gray-700">Display Options:</label>
                                             <select onChange={ChangeValue} value={value} name="displayoptions" id="displayoptions" className="sm:px-[15px] px-[5px]  rounded-[6px] py-[10px] text-[18px] font-normal font-sans border border-gray-300" >
                                                 <option value="">Choose jobs to display</option>
@@ -103,7 +103,7 @@ function Display ({jobs, deleteJob}){
 
                     </div>
                        
-                    <table className="border hidden lg:block  w-full border-gray-700 shadow-md rounded-lg mt-[40px]">
+                    <table className="border  hidden lg:block  w-full border-gray-500 shadow-md rounded-lg mt-[40px]">
                             <thead>
                                     <tr className="bg-gray-200 text-gray-500  font-bold font-inter text-2xl">
                                             <th className="px-4 py-2 border">Index</th>

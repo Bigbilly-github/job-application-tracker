@@ -153,7 +153,7 @@ function AddToJob (addJob,job) {
 
     return(
         <>
-        <section className="w-[100%] h-[90vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
+        <section className="w-[100%] h-[100vh] sm:mt-[120px] mt-[90px]  flex-col   flex items-center">
             <div className="flex  w-[550px] flex-col bg-[#F6F7F8] items-center pl-[40px] border-0 sm:shadow-xl  sm:pb-[20px] rounded-2xl">
 
           
@@ -210,7 +210,7 @@ function AddToJob (addJob,job) {
 
               
              </div>
-             <button  onClick={scrollToSection} type="btn" className="bg-amber-500  text-slate-900  font-medium  px-[40px] sm:mt-[25px] mt-[15px] py-[10px] rounded-[10px] border-0 text-[20px] hover:bg-black hover:text-amber-500">See all Jobs</button>
+             <button  onClick={scrollToSection} type="btn" className="bg-black  text-amber-300  font-medium  px-[40px] sm:mt-[25px] mt-[15px] py-[10px] rounded-[10px] border-0 text-[20px] hover:bg-amber-300 hover:text-black">See all Jobs</button>
         </section>
         </>
     )
