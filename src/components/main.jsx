@@ -9,7 +9,7 @@ import { useValueContext } from "./propscontext";
 function Main () {
     const {jobs, addJob} = useValueContext();
 
-    console.log(addJob)
+    
    
     const [job, setJob] = useState({
         companyname:"",
@@ -147,8 +147,6 @@ function AddToJob (addJob,job) {
         }
     ]
 
-    console.log(job)
-    console.log(jobs)
 
 
     return(
@@ -205,7 +203,7 @@ function AddToJob (addJob,job) {
                  </form>
 
                 <button  onClick={()=> AddToJob(addJob,job)}  type="btn" className=" mt-[20px] font-medium sm:mx-auto -ml-[50px] w-[350px] sm:w-[400px] bg-amber-300 hover:text-amber-300 hover:bg-black py-[10px] font-inter text-[20px] rounded-[10px] sm:shadow-2xl">
-                        Submit
+                        Add Job
 
                     </button>
 
